@@ -2,7 +2,7 @@ import { GoogleGenAI } from "@google/genai";
 import 'dotenv/config'
 
 const ai = new GoogleGenAI({
-  apiKey: process.env.GEMINI_API_KEY 
+  apiKey: process.env.GEMINI_API_KEY
 });
 
 
@@ -10,7 +10,7 @@ const ai = new GoogleGenAI({
 export const main=async(prompt) =>{
   try {
     const result = await ai.models.generateContent({
-      model: "gemini-1.5-flash", 
+      model: "gemini-2.0-flash", 
       contents: [
         {
             role: "user",
