@@ -2,19 +2,16 @@ import { main } from "../services/ai.service.js"
 
 export const AiController = async (req, resp) => {
     try {
-        const prompt = req.query.prompt;
+        const code = req.body.code;
 
-        if (!prompt) {
+        if (!code) {
             return resp.status(400).json({ error: "Prompt is required" });
         }
 
-        const response = await main(prompt);
+        const response = await main(code);
 
         // It is better to return JSON for consistency in APIs
-        return resp.status(200).json({ 
-            success: true,
-            message: response 
-        });
+        resp.send(response);
 
     } catch (error) {
         console.error("Controller Error:", error);

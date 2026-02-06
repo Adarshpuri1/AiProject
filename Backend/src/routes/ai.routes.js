@@ -2,7 +2,7 @@ import express from 'express'
 import { AiController } from '../controller/ai.controller.js';
 const router = express.Router();
 
-router.get('/get-response',AiController)
+router.post('/get-review',AiController)
 
 
-export default router;
+export default router; 
