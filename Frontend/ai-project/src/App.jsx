@@ -25,7 +25,7 @@ function App() {
 
     try {
       const resp = await axios.post(
-        "http://localhost:3000/ai/get-review",
+        "https://aiproject-backend-vr74.onrender.com/ai/get-review",
         { code }
       )
       setReview(resp.data)
