@@ -62,7 +62,8 @@ function App() {
       </div>
 
       <div className='right'>
-       <Markdown rehypePlugins={[rehypehighlight]}>
+       <Markdown rehypePlugins={[rehypehighlight]}
+         style={{fontSize:14}}>
         {review}
        </Markdown>
       </div>
